@@ -25,7 +25,8 @@ Pod::Spec.new do |spec|
   spec.platform          = :ios, "10.0"
   spec.static_framework  = true
   
-  spec.public_header_files = 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/TencentOAuth.h', 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/QQApiInterface.h'
+  spec.public_header_files = 'TencentOpenAPI_Swift/Classes/**/*.h'
+  #'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/TencentOAuth.h', 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/QQApiInterface.h'
   spec.source_files      = 'TencentOpenAPI_Swift/Classes/**/*'
 
   spec.frameworks            = 'Security', 'SystemConfiguration', 'CoreGraphics', 'CoreTelephony', 'WebKit'
@@ -33,4 +34,5 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks   = 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework'
   spec.requires_arc          = true
+  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 end
