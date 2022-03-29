@@ -1,0 +1,2 @@
+# TencentOpenAPI_Swift
+qqsdk
