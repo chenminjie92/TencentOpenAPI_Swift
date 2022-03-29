@@ -12,17 +12,20 @@ Pod::Spec.new do |spec|
   spec.summary          = 'qqsdk'
 
   spec.description      = <<-DESC
-                        qqsdk
-                       DESC
+                            qqsdk
+                          DESC
 
   spec.homepage         = 'https://github.com/chenminjie92/TencentOpenAPI_Swift'
-  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+  spec.license          = { :type => 'MIT', :text => <<-LICENSE
+                              Copyright 2019
+                              LICENSE
+                            }
   spec.author           = { 'chenminjie92' => 'chenminjie92@126.com' }
   spec.source           = { :git => 'https://github.com/chenminjie92/TencentOpenAPI_Swift.git', :tag => "#{spec.version}" }
   spec.platform          = :ios, "10.0"
   spec.static_framework  = true
   
-  spec.public_header_files = 'TencentOpenAPI_Swift/Classes/**/*.h'
+  spec.public_header_files = 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/TencentOAuth.h', 'TencentOpenAPI_Swift/Classes/TencentOpenAPI.framework/Headers/QQApiInterface.h'
   spec.source_files      = 'TencentOpenAPI_Swift/Classes/**/*'
 
   spec.frameworks            = 'Security', 'SystemConfiguration', 'CoreGraphics', 'CoreTelephony', 'WebKit'
